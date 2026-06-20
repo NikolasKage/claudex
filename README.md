@@ -1,6 +1,6 @@
 <p align="center">
-  <strong>claudex — a Claude×Codex combine.</strong><br/>
-  <em>One entry point that runs an external Codex pass over your work in 14 modes — then Claude reconciles the result on the merits.</em>
+  <strong>claudex — a real second opinion for Claude Code.</strong><br/>
+  <em>Hand any work to a different model (Codex) in one of 14 modes — challenge, verify, scope, solve from scratch — and keep only what survives.</em>
 </p>
 
 <p align="center">
@@ -21,13 +21,11 @@
 
 ---
 
-`claudex` is a [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill that pairs Claude with a second model — [Codex](https://openai.com/codex) — through **one dispatcher**. Pick a mode (or let it auto-route), claudex runs a single read-only Codex pass, and Claude judges the result on the merits. It's the big sibling of [`oppo`](https://github.com/NikolasKage/oppo), generalized into **14 collaboration modes**. **Read-only by default. Never edits your files.**
+`claudex` is a [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill: one command routes your task to [Codex](https://openai.com/codex) in the mode that fits — then Claude weighs what comes back on the merits, not on faith. It's [`oppo`](https://github.com/NikolasKage/oppo) grown up: where oppo only argues, claudex gives you **14 modes**. **Read-only by default — it never touches your files.**
 
 ## What it does
 
-A second model is most useful when you point it precisely. `oppo` only argues — `claudex` hands you the whole toolbox: challenge, verify, scope, find prior art, threat-model, premortem, trim. Each is a one-word mode with a purpose-built, gpt-5.x-tuned prompt. Codex does the pass; Claude reconciles and returns a corrected/synthesized answer. Heavy jobs (whole-folder audits, plan-convergence loops, write-capable takeovers) route out to the right tool instead of being faked.
-
-Codex is also an LLM, so its output is treated as a **challenge with burden of proof**, not gospel — unsourced factual claims get checked before they're used.
+Ask one model "are you sure?" and it tends to re-assert. claudex breaks that loop with a *second* model pointed precisely: refute a claim, check facts against the data, find prior art before you build, threat-model a design, premortem a plan, or cut the bloat. Codex runs the pass; Claude reconciles and hands back a sharper answer — verifying any unsourced fact first, because Codex is an LLM too. Heavy jobs (folder audits, plan-convergence loops, write-capable takeovers) route out instead of being faked.
 
 ## Install
 
