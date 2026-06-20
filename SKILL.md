@@ -2,11 +2,12 @@
 name: claudex
 description: >-
   Claude×Codex combine. One entry that runs an external Codex pass over your
-  work in one of 14 modes and reconciles the result on the merits. Modes:
+  work in one of 15 modes and reconciles the result on the merits. Modes:
   scope, fact-check, support, conformance, oppo, steelman, bias-scan, parallel
-  (default), prior-art, probe, threatmodel, referee, premortem, redpen. Routes
-  heavy jobs out: whole-folder offload → codex-delegate, plan-converge loop →
-  plan-tango:tango, stuck write-capable takeover → codex:rescue. Tuned for
+  (default), prior-art, probe, threatmodel, referee, premortem, redpen,
+  delegate (whole-folder offload, claudex owns it). Routes heavy jobs out:
+  plan-converge loop → plan-tango:tango, stuck write-capable takeover →
+  codex:rescue. Tuned for
   non-code work — notes, research, posts, skills, decisions. Triggers:
   «/claudex», "run through claudex", "ask codex", "second model", "parallel",
   "do it independently and compare", «прогони через claudex», «спроси codex»,
@@ -32,15 +33,15 @@ file editor. Codex is also an LLM — its output is a challenge, not authority.
 - `--watch` → run Codex with `-c model_reasoning_summary="detailed"` so the live
   log shows reasoning (default `none` = answer only).
 
-The 14 modes + 1 optional live in [references/modes.md](references/modes.md).
+The 15 modes + 1 optional live in [references/modes.md](references/modes.md).
 Each declares `blind`, `web`, `output`, and a `task`.
 
 ## 2. Auto-routing (mode omitted)
 
 Hard order — stop at first match:
 
-1. **Explicit heavy intent** → delegate (§5): "audit a folder/directory" →
-   `codex-delegate`; "drive a plan to ALLOW" → `plan-tango:tango`; "Claude is
+1. **Explicit heavy intent** → "audit a folder/directory" → `delegate` (§5,
+   claudex owns it); "drive a plan to ALLOW" → `plan-tango:tango`; "Claude is
    stuck, fix it" → `codex:rescue`.
 2. **Write/irreversible** (file edits, migrations) → do NOT fake a read-only
    pass; confirm with the user or route to a write-capable tool.
@@ -107,9 +108,9 @@ minutes — and continue when notified.
 
 Read `"$TMP/out.md"`. Empty/failed run → report the actionable error and stop.
 
-## 5. Heavy modes (route out — do NOT reimplement)
+## 5. Heavy modes (don't fake as a quick pass)
 
-- **delegate** (inside this skill, self-contained): whole-folder/corpus offload.
+- **delegate** (inside this skill, self-contained — do NOT route out): whole-folder/corpus offload.
   Codex greps/reads the tree itself and spawns its own parallel subagents. Full
   pattern + flags + gotchas: [references/delegate.md](references/delegate.md).
 - **tango** → invoke `/plan-tango:tango` (stateful review→fix→ALLOW loop; locks/state — never copy).

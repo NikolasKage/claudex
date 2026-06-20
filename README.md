@@ -77,6 +77,7 @@ Flags: `--effort low|high|xhigh` · `--web on|off` · `--watch` (stream Codex's 
 | **decision** | `referee` — judge A vs B |
 | **change-risk** | `premortem` — why it fails in 6 months |
 | **trim** | `redpen` — cut the bloat |
+| **heavy** | `delegate` — offload a whole folder; Codex reads the tree and fans out its own subagents |
 
 <p align="center">
   <img src="assets/modes.svg" alt="What each claudex mode does: the 15 first-class modes plus 1 optional one, grouped by job, each with a one-line description and its verdict labels" width="100%" />

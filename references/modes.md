@@ -1,6 +1,6 @@
 # claudex — mode registry
 
-14 first-class + 1 optional. Mode prompts are consumed by Codex (gpt-5.x), so they
+15 first-class + 1 optional. Mode prompts are consumed by Codex (gpt-5.x), so they
 follow its prompting guide: operator style, compact XML blocks, an explicit output
 contract, and grounding/citation where guesses hurt quality.
 
@@ -135,6 +135,15 @@ don't pad with invented findings.
 - when: cut bloat — copy / docs / scope of a draft
 - blind: no · web: off · output: findings · blocks: action_safety
 - task: Cut by redpen principles (YAGNI, duplication, preamble-repeats, ornamental structure). A "cut" list: what and why, with an estimated % reduction. Don't rewrite the content — remove the excess.
+
+## heavy
+
+### delegate
+- when: the target is a whole folder / corpus (N modules, N notes), not a single artifact — audit, summary, find-everywhere, or offloading Claude's context for a gpt-5.x pass
+- blind: n/a · web: off (default) · output: findings · blocks: — (heavy mode: its own run pattern, not the §3 engine assembly)
+- not here: fits one read → do it in Claude · needs Claude-side skills (pdf, markitdown, graphify) → stay in Claude · stateful plan loop → `tango` · edits with takeover → `rescue`
+- run: claudex owns it (unlike `tango`/`rescue`, which route out). `codex exec -C <dir> -s read-only --skip-git-repo-check -o <out>` — Codex greps and reads the tree in its own context and spawns its own parallel subagents for independent slices; long runs go to the background. Full pattern, flags, and gotchas: [delegate.md](delegate.md).
+- task: Hand Codex the directory and the job in plain language — tell it it may fan out parallel subagents for independent parts, and what shape the final answer should take. Read-only by default; spot-check any counts it reports against `find`/`grep`.
 
 ---
 
