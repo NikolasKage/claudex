@@ -25,7 +25,7 @@
 
 ## What it does
 
-Ask one model "are you sure?" and it tends to re-assert. claudex breaks that loop with a *second* model pointed precisely: refute a claim, check facts against the data, find prior art before you build, threat-model a design, premortem a plan, or cut the bloat. Codex runs the pass; Claude reconciles and hands back a sharper answer — verifying any unsourced fact first, because Codex is an LLM too. Heavy jobs (folder audits, plan-convergence loops, write-capable takeovers) route out instead of being faked.
+Ask one model "are you sure?" and it tends to re-assert. claudex breaks that loop with a *second* model pointed precisely: refute a claim, check facts against the data, find prior art before you build, threat-model a design, premortem a plan, or cut the bloat. Codex runs the pass; Claude reconciles and hands back a sharper answer — verifying any unsourced fact first, because Codex is an LLM too. Heavy jobs are handled for real, never faked: folder audits run through claudex's own `delegate` mode, a write-capable takeover routes out to `codex:rescue`.
 
 ## Install
 
@@ -90,19 +90,22 @@ Your task ──▶ claudex picks a mode ──▶ Codex (read-only, mode prompt
                                                   Corrected / synthesized answer
 ```
 
-Codex runs `--sandbox read-only` — it reads, it never writes. Target content is wrapped as untrusted input, so instructions hidden inside the material you analyze are inert. Heavy jobs route out instead of being reimplemented:
+Codex runs `--sandbox read-only` — it reads, it never writes. Target content is wrapped as untrusted input, so instructions hidden inside the material you analyze are inert. Heavy jobs are handled for real, never faked as a quick pass:
 
-| Job | Routes to |
+| Job | Handled by |
 |-----|-----------|
-| Whole-folder / corpus audit | `codex-delegate` (Codex spawns its own parallel subagents) |
-| Plan review→fix→ALLOW loop | `plan-tango:tango` |
-| Stuck, needs write-capable takeover | `codex:rescue` |
+| Whole-folder / corpus audit | **`delegate`** — claudex owns it: Codex reads the tree itself and spawns its own parallel subagents. See [references/delegate.md](references/delegate.md). |
+| Stuck, needs write-capable takeover | routes out to `codex:rescue` |
+
+### `delegate` — offload a whole folder
+
+When the target is a directory rather than a single artifact, claudex hands it to Codex with `-C <dir>`: Codex greps and reads the tree in its own context, fans out parallel subagents for independent slices, and returns one answer — your Claude chat stays clean. Read-only by default; spot-check any counts it reports. Full pattern, flags, and gotchas live in [references/delegate.md](references/delegate.md).
 
 ## Requirements
 
 - [Claude Code](https://claude.ai/code)
 - [Codex CLI](https://openai.com/codex), logged in (`codex login`). If Codex is missing or unauthenticated, `claudex` tells you and stops — it never fabricates a result.
-- Optional heavy-mode targets (`codex-delegate`, `plan-tango`, `codex:rescue`) only if you use those routes.
+- Optional: `codex:rescue` — only if you use the write-capable takeover route. (`delegate` needs nothing extra — claudex runs it through the Codex CLI you already have.)
 
 ## License
 
