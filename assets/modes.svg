@@ -1,0 +1,77 @@
+<svg width="100%" viewBox="0 0 1000 820" xmlns="http://www.w3.org/2000/svg" role="img" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<title>claudex — what each mode does</title>
+<desc>The 14 first-class modes plus 3 optional ones, grouped by job, each with a one-line description and its verdict labels. Groups: framing, truth/evidence, critique, solution, robustness, decision, change-risk, trim, optional.</desc>
+
+<rect x="1" y="1" width="998" height="818" rx="16" fill="#0E1117" stroke="#232A33" stroke-width="1"/>
+
+<text x="40" y="54" font-size="26" font-weight="500" fill="#E6EDF3">claudex — what each mode does</text>
+<text x="40" y="82" font-size="15" font-weight="400" fill="#8B949E">14 first-class modes + 3 optional, grouped by job.</text>
+
+<!-- ===== Column A (x=40) ===== -->
+
+<line x1="40" y1="110" x2="490" y2="110" stroke="#232A33" stroke-width="1"/>
+<text x="40" y="126" font-size="13" font-weight="500" fill="#888780">framing — setup</text>
+<text x="40" y="150" font-size="14"><tspan font-weight="500" fill="#888780">scope</tspan></text>
+<text x="40" y="168" font-size="13" fill="#8B949E">Doesn't solve the task — checks its setup: boundaries, inputs,<tspan x="40" dy="17">done-criteria. Returns up to 5 clarifying questions.</tspan></text>
+
+<line x1="40" y1="205" x2="490" y2="205" stroke="#232A33" stroke-width="1"/>
+<text x="40" y="221" font-size="13" font-weight="500" fill="#378ADD">truth / evidence</text>
+<text x="40" y="245" font-size="14"><tspan font-weight="500" fill="#378ADD">fact-check</tspan><tspan font-weight="400" font-size="12" fill="#6E7681">   ·  web</tspan></text>
+<text x="40" y="263" font-size="13" fill="#8B949E">Checks facts, numbers, dates, versions against the real world.<tspan x="40" dy="17">Each: VERIFIED / WRONG / UNVERIFIABLE, with a source.</tspan></text>
+<text x="40" y="304" font-size="14"><tspan font-weight="500" fill="#378ADD">support</tspan></text>
+<text x="40" y="322" font-size="13" fill="#8B949E">Does the conclusion follow from the attached data?<tspan x="40" dy="17">SUPPORTED / OVERSTATED / UNSUPPORTED + a corrected wording.</tspan></text>
+<text x="40" y="363" font-size="14"><tspan font-weight="500" fill="#378ADD">conformance</tspan></text>
+<text x="40" y="381" font-size="13" fill="#8B949E">Checks an artifact against rules / brief / spec.<tspan x="40" dy="17">VIOLATION / OK / UNCLEAR with a quote of the rule.</tspan></text>
+
+<line x1="40" y1="418" x2="490" y2="418" stroke="#232A33" stroke-width="1"/>
+<text x="40" y="434" font-size="13" font-weight="500" fill="#D85A30">critique</text>
+<text x="40" y="458" font-size="14"><tspan font-weight="500" fill="#D85A30">oppo</tspan></text>
+<text x="40" y="476" font-size="13" fill="#8B949E">Adversarial — refutes the thesis. First line VERDICT: SOUND<tspan x="40" dy="17">or CONTESTED, then material objections with reasoning.</tspan></text>
+<text x="40" y="517" font-size="14"><tspan font-weight="500" fill="#D85A30">steelman</tspan></text>
+<text x="40" y="535" font-size="13" fill="#8B949E">Builds the strongest case FOR the idea before rejecting it.</text>
+<text x="40" y="559" font-size="14"><tspan font-weight="500" fill="#D85A30">bias-scan</tspan></text>
+<text x="40" y="577" font-size="13" fill="#8B949E">Hidden assumptions &amp; framing bias: sunk_cost, false_dichotomy,<tspan x="40" dy="17">loaded_framing, selection_bias — plus a neutral reframe.</tspan></text>
+
+<line x1="40" y1="614" x2="490" y2="614" stroke="#232A33" stroke-width="1"/>
+<text x="40" y="630" font-size="13" font-weight="500" fill="#1D9E75">solution</text>
+<text x="40" y="654" font-size="14"><tspan font-weight="500" fill="#1D9E75">parallel</tspan><tspan font-weight="400" font-size="12" fill="#6E7681">   ·  default · blind</tspan></text>
+<text x="40" y="672" font-size="13" fill="#8B949E">Solves from scratch, unseen. Claude then diffs the answers:<tspan x="40" dy="17">matched / only-Claude / only-Codex / conflict.</tspan></text>
+<text x="40" y="713" font-size="14"><tspan font-weight="500" fill="#1D9E75">prior-art</tspan><tspan font-weight="400" font-size="12" fill="#6E7681">   ·  web</tspan></text>
+<text x="40" y="731" font-size="13" fill="#8B949E">Already solved? Libraries, patterns, tools, articles —<tspan x="40" dy="17">what each covers and what's missing.</tspan></text>
+
+<!-- ===== Column B (x=520) ===== -->
+
+<line x1="520" y1="110" x2="970" y2="110" stroke="#232A33" stroke-width="1"/>
+<text x="520" y="126" font-size="13" font-weight="500" fill="#BA7517">robustness</text>
+<text x="520" y="150" font-size="14"><tspan font-weight="500" fill="#BA7517">probe</tspan><tspan font-weight="400" font-size="12" fill="#6E7681">   ·  blind</tspan></text>
+<text x="520" y="168" font-size="13" fill="#8B949E">The cheapest verification plan: 2-4 steps that try to<tspan x="520" dy="17">falsify fast. branch_cut + cost for each.</tspan></text>
+<text x="520" y="209" font-size="14"><tspan font-weight="500" fill="#BA7517">threatmodel</tspan></text>
+<text x="520" y="227" font-size="13" fill="#8B949E">Threat model: assets, attackers, abuse-paths, injection,<tspan x="520" dy="17">privacy leaks — with a concrete defense for each.</tspan></text>
+
+<line x1="520" y1="264" x2="970" y2="264" stroke="#232A33" stroke-width="1"/>
+<text x="520" y="280" font-size="13" font-weight="500" fill="#7F77DD">decision</text>
+<text x="520" y="304" font-size="14"><tspan font-weight="500" fill="#7F77DD">referee</tspan></text>
+<text x="520" y="322" font-size="13" fill="#8B949E">Compares two finished artifacts, A vs B. WINNER + why,<tspan x="520" dy="17">and what to take from the loser.</tspan></text>
+
+<line x1="520" y1="359" x2="970" y2="359" stroke="#232A33" stroke-width="1"/>
+<text x="520" y="375" font-size="13" font-weight="500" fill="#D4537E">change-risk</text>
+<text x="520" y="399" font-size="14"><tspan font-weight="500" fill="#D4537E">premortem</tspan></text>
+<text x="520" y="417" font-size="13" fill="#8B949E">Assume the plan failed in 6 months. Failure modes by<tspan x="520" dy="17">likelihood + early_signal + a cheap near-term hedge.</tspan></text>
+
+<line x1="520" y1="454" x2="970" y2="454" stroke="#232A33" stroke-width="1"/>
+<text x="520" y="470" font-size="13" font-weight="500" fill="#639922">trim</text>
+<text x="520" y="494" font-size="14"><tspan font-weight="500" fill="#639922">redpen</tspan></text>
+<text x="520" y="512" font-size="13" fill="#8B949E">Cuts bloat (YAGNI, duplication, ornament). A 'cut' list:<tspan x="520" dy="17">what and why, with an estimated % reduction.</tspan></text>
+
+<line x1="520" y1="549" x2="970" y2="549" stroke="#232A33" stroke-width="1"/>
+<text x="520" y="565" font-size="13" font-weight="500" fill="#888780">optional — on demand</text>
+<text x="520" y="589" font-size="14"><tspan font-weight="500" fill="#888780">counter-example</tspan><tspan font-weight="400" font-size="12" fill="#6E7681">   ·  blind</tspan></text>
+<text x="520" y="607" font-size="13" fill="#8B949E">The minimal concrete case that breaks the rule —<tspan x="520" dy="17">or the conditions under which it holds.</tspan></text>
+<text x="520" y="648" font-size="14"><tspan font-weight="500" fill="#888780">meta-prompt</tspan></text>
+<text x="520" y="666" font-size="13" fill="#8B949E">Critique &amp; rewrite a prompt: ambiguities, missing context,<tspan x="520" dy="17">vague output format. Returns a better version + edits.</tspan></text>
+<text x="520" y="707" font-size="14"><tspan font-weight="500" fill="#888780">rephrase</tspan></text>
+<text x="520" y="725" font-size="13" fill="#8B949E">3-5 alternative wordings or naming options, each rated<tspan x="520" dy="17">better/worse than the original on clarity and stickiness.</tspan></text>
+
+<line x1="40" y1="770" x2="970" y2="770" stroke="#232A33" stroke-width="1"/>
+<text x="40" y="789" font-size="12" fill="#6E7681">blind — Codex doesn't see Claude's answer   ·   web — web search on   ·   default — runs when no mode is given</text>
+</svg>
