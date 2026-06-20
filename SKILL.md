@@ -32,7 +32,7 @@ file editor. Codex is also an LLM — its output is a challenge, not authority.
 - `--watch` → run Codex with `-c model_reasoning_summary="detailed"` so the live
   log shows reasoning (default `none` = answer only).
 
-The 14 modes + 3 optional live in [references/modes.md](references/modes.md).
+The 14 modes + 1 optional live in [references/modes.md](references/modes.md).
 Each declares `blind`, `web`, `output`, and a `task`.
 
 ## 2. Auto-routing (mode omitted)
@@ -123,7 +123,7 @@ accept or reject. If Codex asserts a material fact without a source, verify with
 
 - **comparison** (parallel): the diff — matched / only Claude / only Codex / conflict.
 - **findings / verification / risk** (oppo, fact-check, support, conformance, bias-scan,
-  prior-art, probe, threatmodel, premortem, steelman, redpen, rephrase): per item
+  prior-art, probe, threatmodel, premortem, steelman, redpen): per item
   CONCEDE / DEFEND / PARTIAL with reasoning + sources.
 - **decision** (referee): winner + what to take from the loser.
 - **rewrite** (meta-prompt): the improved version.

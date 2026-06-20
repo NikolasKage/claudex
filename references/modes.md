@@ -1,6 +1,6 @@
 # claudex — mode registry
 
-14 first-class + 3 optional. Mode prompts are consumed by Codex (gpt-5.x), so they
+14 first-class + 1 optional. Mode prompts are consumed by Codex (gpt-5.x), so they
 follow its prompting guide: operator style, compact XML blocks, an explicit output
 contract, and grounding/citation where guesses hurt quality.
 
@@ -140,17 +140,7 @@ don't pad with invented findings.
 
 ## optional (overlap with existing tools, include on demand)
 
-### counter-example  [opt]
-- when: test a general rule/claim/spec with a concrete breaking case (NOT about code)
-- blind: yes · web: off · output: findings · blocks: grounding_rules
-- task: Find the minimal concrete case where this rule/generalization/spec breaks (a falsifying case). If you find none — say under what conditions the rule holds.
-
 ### meta-prompt  [opt, overlaps with prompt-master]
 - when: polish a prompt before sending it to any model
 - blind: no · web: off · output: rewrite · blocks: structured_output_contract
 - task: Critique and rewrite this prompt: ambiguities, missing context, vague output format. Return an improved version + a list of edits.
-
-### rephrase  [opt, low ROI]
-- when: naming / wording / headlines where an outside view helps
-- blind: no · web: off · output: findings · blocks: structured_output_contract
-- task: Give 3-5 alternative wordings/naming options. For each — how it's better/worse than the original in clarity and stickiness.

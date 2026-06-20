@@ -1,11 +1,11 @@
 <svg width="100%" viewBox="0 0 1000 820" xmlns="http://www.w3.org/2000/svg" role="img" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
 <title>claudex — what each mode does</title>
-<desc>The 14 first-class modes plus 3 optional ones, grouped by job, each with a one-line description and its verdict labels. Groups: framing, truth/evidence, critique, solution, robustness, decision, change-risk, trim, optional.</desc>
+<desc>The 14 first-class modes plus 1 optional one, grouped by job, each with a one-line description and its verdict labels. Groups: framing, truth/evidence, critique, solution, robustness, decision, change-risk, trim, optional.</desc>
 
 <rect x="1" y="1" width="998" height="818" rx="16" fill="#0E1117" stroke="#232A33" stroke-width="1"/>
 
 <text x="40" y="54" font-size="26" font-weight="500" fill="#E6EDF3">claudex — what each mode does</text>
-<text x="40" y="82" font-size="15" font-weight="400" fill="#8B949E">14 first-class modes + 3 optional, grouped by job.</text>
+<text x="40" y="82" font-size="15" font-weight="400" fill="#8B949E">14 first-class modes + 1 optional, grouped by job.</text>
 
 <!-- ===== Column A (x=40) ===== -->
 
@@ -65,12 +65,8 @@
 
 <line x1="520" y1="549" x2="970" y2="549" stroke="#232A33" stroke-width="1"/>
 <text x="520" y="565" font-size="13" font-weight="500" fill="#888780">optional — on demand</text>
-<text x="520" y="589" font-size="14"><tspan font-weight="500" fill="#888780">counter-example</tspan><tspan font-weight="400" font-size="12" fill="#6E7681">   ·  blind</tspan></text>
-<text x="520" y="607" font-size="13" fill="#8B949E">The minimal concrete case that breaks the rule —<tspan x="520" dy="17">or the conditions under which it holds.</tspan></text>
-<text x="520" y="648" font-size="14"><tspan font-weight="500" fill="#888780">meta-prompt</tspan></text>
-<text x="520" y="666" font-size="13" fill="#8B949E">Critique &amp; rewrite a prompt: ambiguities, missing context,<tspan x="520" dy="17">vague output format. Returns a better version + edits.</tspan></text>
-<text x="520" y="707" font-size="14"><tspan font-weight="500" fill="#888780">rephrase</tspan></text>
-<text x="520" y="725" font-size="13" fill="#8B949E">3-5 alternative wordings or naming options, each rated<tspan x="520" dy="17">better/worse than the original on clarity and stickiness.</tspan></text>
+<text x="520" y="589" font-size="14"><tspan font-weight="500" fill="#888780">meta-prompt</tspan></text>
+<text x="520" y="607" font-size="13" fill="#8B949E">Critique &amp; rewrite a prompt: ambiguities, missing context,<tspan x="520" dy="17">vague output format. Returns a better version + edits.</tspan></text>
 
 <line x1="40" y1="770" x2="970" y2="770" stroke="#232A33" stroke-width="1"/>
 <text x="40" y="789" font-size="12" fill="#6E7681">blind — Codex doesn't see Claude's answer   ·   web — web search on   ·   default — runs when no mode is given</text>

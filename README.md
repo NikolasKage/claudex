@@ -79,7 +79,7 @@ Flags: `--effort low|high|xhigh` · `--web on|off` · `--watch` (stream Codex's 
 | **trim** | `redpen` — cut the bloat |
 
 <p align="center">
-  <img src="assets/modes.svg" alt="What each claudex mode does: the 14 first-class modes plus 3 optional ones, grouped by job, each with a one-line description and its verdict labels" width="100%" />
+  <img src="assets/modes.svg" alt="What each claudex mode does: the 14 first-class modes plus 1 optional one, grouped by job, each with a one-line description and its verdict labels" width="100%" />
 </p>
 
 Modes are data, not code — each is a block in [`references/modes.md`](references/modes.md). Add one by adding a block, not a new skill.
