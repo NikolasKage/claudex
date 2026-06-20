@@ -9,7 +9,9 @@ description: >-
   plan-tango:tango, stuck write-capable takeover → codex:rescue. Tuned for
   non-code work — notes, research, posts, skills, decisions. Triggers:
   «/claudex», "run through claudex", "ask codex", "second model", "parallel",
-  "do it independently and compare", «прогони через claudex», «спроси codex».
+  "do it independently and compare", «прогони через claudex», «спроси codex»,
+  "challenge this", "red team this", "devil's advocate", "fact-check this",
+  «оспорь», «перепроверь», «второе мнение», «ты уверен?».
 allowed-tools: Bash, Read, WebSearch
 ---
 

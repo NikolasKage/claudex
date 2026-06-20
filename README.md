@@ -61,7 +61,7 @@ When the user types `/claudex`, invoke the Skill tool with skill "claudex" befor
 
 Or just say it in plain language — the skill triggers on:
 
-> *"run through claudex"* · *"ask codex"* · *"second model"* · *"do it independently and compare"* · *"parallel"*
+> *"run through claudex"* · *"ask codex"* · *"second model"* · *"do it independently and compare"* · *"parallel"* · *"challenge this"* · *"red team this"* · *"devil's advocate"* · *"fact-check this"*
 
 Flags: `--effort low|high|xhigh` · `--web on|off` · `--watch` (stream Codex's reasoning to a live log).
 
