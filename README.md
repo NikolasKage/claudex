@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="assets/banner.png" alt="claudex — a real second opinion for Claude Code" width="100%" />
+</p>
+
+<p align="center">
   <strong>claudex — a real second opinion for Claude Code.</strong><br/>
   <em>Hand any work to a different model (Codex) in one of 14 modes — challenge, verify, scope, solve from scratch — and keep only what survives.</em>
 </p>
@@ -78,17 +82,9 @@ Modes are data, not code — each is a block in [`references/modes.md`](referenc
 
 ## How it works
 
-```
-Your task ──▶ claudex picks a mode ──▶ Codex (read-only, mode prompt) ──▶ result
-                                                                            │
-                                                                            ▼
-                                              Claude reconciles on the merits
-                                              CONCEDE · DEFEND · PARTIAL  /  diff
-                                              (verifies unsourced facts via WebSearch)
-                                                                            │
-                                                                            ▼
-                                                  Corrected / synthesized answer
-```
+<p align="center">
+  <img src="assets/how-it-works.svg" alt="claudex flow: your task → pick a mode → Codex read-only pass → Claude reconciles on the merits → sharper answer; with the 14 modes grouped" width="100%" />
+</p>
 
 Codex runs `--sandbox read-only` — it reads, it never writes. Target content is wrapped as untrusted input, so instructions hidden inside the material you analyze are inert. Heavy jobs are handled for real, never faked as a quick pass:
 
