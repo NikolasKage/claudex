@@ -1,13 +1,13 @@
-<svg width="100%" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" role="img" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+<svg width="100%" viewBox="0 0 1000 530" xmlns="http://www.w3.org/2000/svg" role="img" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
 <title>How claudex works</title>
-<desc>A task is routed to Codex in a chosen mode, Codex runs a read-only pass, Claude reconciles the result on the merits, and returns a sharper answer. Below: the 14 modes grouped, and the heavy jobs.</desc>
+<desc>A task is routed to Codex in a chosen mode, Codex runs a read-only pass, Claude reconciles the result on the merits, and returns a sharper answer. Below: the 15 modes grouped, including delegate, and the heavy jobs.</desc>
 <defs>
 <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
 <path d="M2 1L8 5L2 9" fill="none" stroke="#6E7681" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </marker>
 </defs>
 
-<rect x="1" y="1" width="998" height="498" rx="16" fill="#0E1117" stroke="#232A33" stroke-width="1"/>
+<rect x="1" y="1" width="998" height="528" rx="16" fill="#0E1117" stroke="#232A33" stroke-width="1"/>
 
 <text x="40" y="54" font-size="26" font-weight="500" fill="#E6EDF3">How claudex works</text>
 <text x="40" y="82" font-size="15" font-weight="400" fill="#8B949E">Hand any work to a second model in the mode that fits — then keep only what survives.</text>
@@ -19,7 +19,7 @@
 
 <rect x="235" y="140" width="160" height="84" rx="8" fill="#2A1712" stroke="#D85A30" stroke-width="1"/>
 <text x="315" y="178" font-size="15" font-weight="500" fill="#F5C4B3" text-anchor="middle">Pick a mode</text>
-<text x="315" y="200" font-size="12" font-weight="400" fill="#F0997B" text-anchor="middle">14 modes</text>
+<text x="315" y="200" font-size="12" font-weight="400" fill="#F0997B" text-anchor="middle">15 modes</text>
 
 <rect x="430" y="140" width="160" height="84" rx="8" fill="#0C2A22" stroke="#1D9E75" stroke-width="1"/>
 <text x="510" y="178" font-size="15" font-weight="500" fill="#9FE1CB" text-anchor="middle">Codex pass</text>
@@ -43,19 +43,22 @@
 
 <line x1="40" y1="282" x2="960" y2="282" stroke="#232A33" stroke-width="1"/>
 
-<text x="40" y="312" font-size="16" font-weight="500" fill="#C9D1D9">14 modes, grouped</text>
+<text x="40" y="312" font-size="16" font-weight="500" fill="#C9D1D9">15 modes, grouped</text>
 
-<!-- left column: orange group names -->
-<text x="40" y="344" font-size="13"><tspan font-weight="500" fill="#F0997B">framing</tspan><tspan font-weight="400" fill="#8B949E"> — scope</tspan></text>
-<text x="40" y="376" font-size="13"><tspan font-weight="500" fill="#F0997B">truth / evidence</tspan><tspan font-weight="400" fill="#8B949E"> — fact-check, support, conformance</tspan></text>
-<text x="40" y="408" font-size="13"><tspan font-weight="500" fill="#F0997B">critique</tspan><tspan font-weight="400" fill="#8B949E"> — oppo, steelman, bias-scan</tspan></text>
-<text x="40" y="440" font-size="13"><tspan font-weight="500" fill="#F0997B">solution</tspan><tspan font-weight="400" fill="#8B949E"> — parallel (default), prior-art</tspan></text>
+<!-- left column: per-group colors, matching modes.svg -->
+<text x="40" y="344" font-size="13"><tspan font-weight="500" fill="#888780">framing</tspan><tspan font-weight="400" fill="#8B949E"> — scope</tspan></text>
+<text x="40" y="376" font-size="13"><tspan font-weight="500" fill="#378ADD">truth / evidence</tspan><tspan font-weight="400" fill="#8B949E"> — fact-check, support, conformance</tspan></text>
+<text x="40" y="408" font-size="13"><tspan font-weight="500" fill="#D85A30">critique</tspan><tspan font-weight="400" fill="#8B949E"> — oppo, steelman, bias-scan</tspan></text>
+<text x="40" y="440" font-size="13"><tspan font-weight="500" fill="#1D9E75">solution</tspan><tspan font-weight="400" fill="#8B949E"> — parallel (default), prior-art</tspan></text>
 
-<!-- right column: teal group names -->
-<text x="520" y="344" font-size="13"><tspan font-weight="500" fill="#5DCAA5">robustness</tspan><tspan font-weight="400" fill="#8B949E"> — probe, threatmodel</tspan></text>
-<text x="520" y="376" font-size="13"><tspan font-weight="500" fill="#5DCAA5">decision</tspan><tspan font-weight="400" fill="#8B949E"> — referee</tspan></text>
-<text x="520" y="408" font-size="13"><tspan font-weight="500" fill="#5DCAA5">change-risk</tspan><tspan font-weight="400" fill="#8B949E"> — premortem</tspan></text>
-<text x="520" y="440" font-size="13"><tspan font-weight="500" fill="#5DCAA5">trim</tspan><tspan font-weight="400" fill="#8B949E"> — redpen</tspan></text>
+<!-- right column: per-group colors, matching modes.svg -->
+<text x="520" y="344" font-size="13"><tspan font-weight="500" fill="#BA7517">robustness</tspan><tspan font-weight="400" fill="#8B949E"> — probe, threatmodel</tspan></text>
+<text x="520" y="376" font-size="13"><tspan font-weight="500" fill="#7F77DD">decision</tspan><tspan font-weight="400" fill="#8B949E"> — referee</tspan></text>
+<text x="520" y="408" font-size="13"><tspan font-weight="500" fill="#D4537E">change-risk</tspan><tspan font-weight="400" fill="#8B949E"> — premortem</tspan></text>
+<text x="520" y="440" font-size="13"><tspan font-weight="500" fill="#639922">trim</tspan><tspan font-weight="400" fill="#8B949E"> — redpen</tspan></text>
 
-<text x="40" y="476" font-size="12" font-weight="400" fill="#6E7681">Heavy jobs — delegate: whole-folder audit (claudex owns it) · codex:rescue: write-capable takeover.</text>
+<!-- the 15th, heavy: delegate -->
+<text x="40" y="472" font-size="13"><tspan font-weight="500" fill="#1FA8C2">heavy</tspan><tspan font-weight="400" fill="#8B949E"> — delegate (whole-folder audit, Codex fans out its own subagents)</tspan></text>
+
+<text x="40" y="508" font-size="12" font-weight="400" fill="#6E7681">Heavy job routed out — codex:rescue: write-capable takeover when Claude is stuck and edits are needed.</text>
 </svg>

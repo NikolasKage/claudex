@@ -4,7 +4,7 @@
 
 <p align="center">
   <strong>claudex — a real second opinion for Claude Code.</strong><br/>
-  <em>Hand any work to a different model (Codex) in one of 14 modes — challenge, verify, scope, solve from scratch — and keep only what survives.</em>
+  <em>Hand any work to a different model (Codex) in one of 15 modes — challenge, verify, scope, solve from scratch — and keep only what survives.</em>
 </p>
 
 <p align="center">
@@ -25,7 +25,7 @@
 
 ---
 
-`claudex` is a [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill: one command routes your task to [Codex](https://openai.com/codex) in the mode that fits — then Claude weighs what comes back on the merits, not on faith. It's [`oppo`](https://github.com/NikolasKage/oppo) grown up: where oppo only argues, claudex gives you **14 modes**. **Read-only by default — it never touches your files.**
+`claudex` is a [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill: one command routes your task to [Codex](https://openai.com/codex) in the mode that fits — then Claude weighs what comes back on the merits, not on faith. It's [`oppo`](https://github.com/NikolasKage/oppo) grown up: where oppo only argues, claudex gives you **15 modes**. **Read-only by default — it never touches your files.**
 
 ## What it does
 
@@ -43,7 +43,7 @@ git clone https://github.com/NikolasKage/claudex.git ~/.claude/skills/claudex
 Claude Code auto-discovers skills in `~/.claude/skills/`. To make `/claudex` fire reliably, add to `~/.claude/CLAUDE.md`:
 
 ```
-- **claudex** (`~/.claude/skills/claudex/SKILL.md`) — Claude×Codex combine, 14 modes. Trigger: `/claudex`
+- **claudex** (`~/.claude/skills/claudex/SKILL.md`) — Claude×Codex combine, 15 modes. Trigger: `/claudex`
 When the user types `/claudex`, invoke the Skill tool with skill "claudex" before anything else.
 ```
 
@@ -79,7 +79,7 @@ Flags: `--effort low|high|xhigh` · `--web on|off` · `--watch` (stream Codex's 
 | **trim** | `redpen` — cut the bloat |
 
 <p align="center">
-  <img src="assets/modes.svg" alt="What each claudex mode does: the 14 first-class modes plus 1 optional one, grouped by job, each with a one-line description and its verdict labels" width="100%" />
+  <img src="assets/modes.svg" alt="What each claudex mode does: the 15 first-class modes plus 1 optional one, grouped by job, each with a one-line description and its verdict labels" width="100%" />
 </p>
 
 Modes are data, not code — each is a block in [`references/modes.md`](references/modes.md). Add one by adding a block, not a new skill.
@@ -87,7 +87,7 @@ Modes are data, not code — each is a block in [`references/modes.md`](referenc
 ## How it works
 
 <p align="center">
-  <img src="assets/how-it-works.svg" alt="claudex flow: your task → pick a mode → Codex read-only pass → Claude reconciles on the merits → sharper answer; with the 14 modes grouped" width="100%" />
+  <img src="assets/how-it-works.svg" alt="claudex flow: your task → pick a mode → Codex read-only pass → Claude reconciles on the merits → sharper answer; with the 15 modes grouped" width="100%" />
 </p>
 
 Codex runs `--sandbox read-only` — it reads, it never writes. Target content is wrapped as untrusted input, so instructions hidden inside the material you analyze are inert. Heavy jobs are handled for real, never faked as a quick pass:
