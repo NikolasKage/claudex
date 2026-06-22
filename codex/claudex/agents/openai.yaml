@@ -1,0 +1,4 @@
+interface:
+  display_name: "Claudex"
+  short_description: "External Claude pass in synced modes"
+  default_prompt: "Use $claudex to ask external Claude for a second pass and reconcile it."

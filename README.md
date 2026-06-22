@@ -27,11 +27,15 @@
 
 `claudex` is a [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill: one command routes your task to [Codex](https://openai.com/codex) in the mode that fits — then Claude weighs what comes back on the merits, not on faith. It's [`oppo`](https://github.com/NikolasKage/oppo) grown up: where oppo only argues, claudex gives you **15 modes**. **Read-only by default — it never touches your files.**
 
+This repo also includes a Codex-side mirror at [`codex/claudex`](codex/claudex): the same mode set and reconciliation contract, adapted for Codex to ask external Claude via `claude -p`.
+
 ## What it does
 
 Ask one model "are you sure?" and it tends to re-assert. claudex breaks that loop with a *second* model pointed precisely: refute a claim, check facts against the data, find prior art before you build, threat-model a design, premortem a plan, or cut the bloat. Codex runs the pass; Claude reconciles and hands back a sharper answer — verifying any unsourced fact first, because Codex is an LLM too. Heavy jobs are handled for real, never faked: folder audits run through claudex's own `delegate` mode, a write-capable takeover routes out to `codex:rescue`.
 
 ## Install
+
+### Claude Code skill
 
 ```bash
 git clone https://github.com/NikolasKage/claudex.git ~/.claude/skills/claudex
@@ -48,6 +52,22 @@ When the user types `/claudex`, invoke the Skill tool with skill "claudex" befor
 ```
 
 </details>
+
+### Codex skill mirror
+
+Use this when you are inside Codex and want the opposite direction: Codex asks
+external Claude for the second pass.
+
+```bash
+git clone https://github.com/NikolasKage/claudex.git /tmp/claudex
+mkdir -p ~/.codex/skills/claudex
+cp -R /tmp/claudex/codex/claudex/. ~/.codex/skills/claudex/
+```
+
+The mirror keeps the same 15 modes plus optional `meta-prompt`. Its `delegate`
+mode is included and adapted for Codex→Claude: Codex invokes `claude -p` with
+`--add-dir` and read/search tools so Claude can review a whole folder without
+write access.
 
 ## Usage
 
@@ -107,6 +127,9 @@ When the target is a directory rather than a single artifact, claudex hands it t
 - [Claude Code](https://claude.ai/code)
 - [Codex CLI](https://openai.com/codex), logged in (`codex login`). If Codex is missing or unauthenticated, `claudex` tells you and stops — it never fabricates a result.
 - Optional: `codex:rescue` — only if you use the write-capable takeover route. (`delegate` needs nothing extra — claudex runs it through the Codex CLI you already have.)
+
+For the Codex-side mirror, invert the requirement: Codex is the host, and
+external Claude Code must be installed and logged in (`claude auth status`).
 
 ## License
 
